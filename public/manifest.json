@@ -3,13 +3,16 @@
   "name": "My Vite Extension",
   "version": "1.0.0",
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "src/pages/popout/popout.html"
   },
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://*/*", "http://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],  
+  "host_permissions": ["<all_urls>"],
   "icons": {
-    "16": "assets/icon-16.png",
-    "32": "assets/icon-32.png",
-    "48": "assets/icon-48.png"
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png"
   }
 }
